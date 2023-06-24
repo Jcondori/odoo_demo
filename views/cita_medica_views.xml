@@ -34,6 +34,7 @@
                             <group>
                                 <field name="partner_id" string="Doctor" options="{'no_create':True}" context="{'default_is_doctor':True,'create':0}" domain="[('is_doctor','=',True)]"
                                        attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
                             </group>
                         </group>
                         <notebook>

@@ -14,7 +14,8 @@ class CitaMedica(models.Model):
     partner_id = fields.Many2one('res.partner', string='Médico', ondelete='restrict')
     state = fields.Selection([('draft', 'Draft'), ('done', 'Done'), ('cancel', 'Cancelled')], string='Status',
                              required=True, readonly=True, copy=False, default='draft')
-    line_ids = fields.One2many('medical.appointment.line', 'appointment_id')
+    line_ids = fields.One2many(comodel_name='medical.appointment.line', inverse_name='appointment_id')
+    category_ids = fields.Many2many('res.partner.category', string='Tags')
 
     def action_confirm(self):
         for cita in self:
@@ -33,16 +34,42 @@ class CitaMedica(models.Model):
 
     def create_line(self):
         self.ensure_one()
-        product = self.env['product.product'].search([], limit=1)
+        # product = self.env['product.product'].search([], limit=1)
+        # vals = {
+        #     'appointment_id': self.id,
+        #     'product_id': product.id,
+        #     'quantity': 1,
+        # }
+        # # stock = self.env['stock.quant'].search([('product_id', '=', product.id)])
+        # # if sum(stock.mapped('quantity')) < 1:
+        # #     raise ('El producto no tiene stock')
+        # self.env['medical.appointment.line'].create(vals)
+
+        # category = self.env['res.partner.category'].search([('name', 'like', 'i')], limit=1)
+        # if category:
+        #     vals = {'category_ids': [(4, x.id) for x in category]}
+        #     self.write(vals)
+
+        # if self.category_ids:
+        #     vals = {'category_ids': [(3, self.category_ids[-1].id)]}
+        #     self.write(vals)
+
+        # self.write({'category_ids': [(5)]})
+
+        # product = self.env['product.product'].search([], limit=1)
         vals = {
-            'appointment_id': self.id,
             'product_id': product.id,
-            'quantity': 1
+            'quantity': 5,
         }
-        stock = self.env['stock.quant'].search([('product_id', '=', product.id)])
-        if sum(stock.mapped('quantity')) < 1:
-            raise ('El producto no tiene stock')
-        self.env['medical.appointment.line'].create(vals)
+        self.write({'line_ids': [(0, 0, vals)]})
+
+        # if self.line_ids:
+        #     self.write({'line_ids': [(1, self.line_ids[0].id, {'quantity': 8})]})
+
+
+    def write(self, vals):
+        res = super().write(vals)
+        return res
 
 
 class MedicalAppointmentLine(models.Model):
