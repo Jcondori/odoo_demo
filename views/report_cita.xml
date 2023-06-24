@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_cita_medico_document">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)"/>
+                <t t-set="num_cita" t-value="0"/>
+                <div class="page">
+                    <h2>
+                        <spam t-field="o.name"/>
+                    </h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Correo del médico:</strong>
+                            <p class="m-0" t-field="o.partner_id.email"/>
+                        </div>
+                        <!--                        <div class="col">-->
+                        <!--                            Column-->
+                        <!--                        </div>-->
+                        <!--                        <div class="col">-->
+                        <!--                            Column-->
+                        <!--                        </div>-->
+                    </div>
+                    <div class="row mt-3 ms-0.5">
+                        <div class="col-12">
+                            <strong>Diagnostico:</strong>
+                            <p class="m-0" t-field="o.description"/>
+                        </div>
+                    </div>
+                    <div t-if="o.partner_id.image_1920" class="row mt-3 ms-0.5">
+                        <div class="col-12">
+                            <strong>Medico:</strong>
+                            <img t-att-src="image_data_uri(o.partner_id.image_1920)" alt="Foto"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_cita_medico">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.partner_id.lang"/>
+                    <t t-call="odoo_demo.report_cita_medico_document" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

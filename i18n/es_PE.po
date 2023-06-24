@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_demo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-17 15:13+0000\n"
+"PO-Revision-Date: 2023-06-17 10:14-0500\n"
+"Last-Translator: Jose Luis Condori Jara <jc@grupoquanam.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: odoo_demo
+#: model:ir.actions.report,print_report_name:odoo_demo.cita_medica
+msgid "('Cita Medica')"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.report_cita_medico_document
+msgid "<strong>Correo del médico:</strong>"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.report_cita_medico_document
+msgid "<strong>Diagnostico:</strong>"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.report_cita_medico_document
+msgid "<strong>Medico:</strong>"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields.selection,name:odoo_demo.selection__cita_medica__state__cancel
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: odoo_demo
+#: model:ir.actions.report,name:odoo_demo.cita_medica
+#: model:ir.model,name:odoo_demo.model_cita_medica
+#: model:ir.ui.menu,name:odoo_demo.cita_medica_root
+msgid "Cita Medica"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.ui.menu,name:odoo_demo.cita_medica_2
+msgid "Cita Medica 2"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.ui.menu,name:odoo_demo.cita_medica_menu
+msgid "Cita Medica 3"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.actions.act_window,name:odoo_demo.cita_medica_action
+msgid "Citas Medicas"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: odoo_demo
+#: model:ir.model,name:odoo_demo.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__description
+msgid "Diagnostico"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_form
+#: model_terms:ir.ui.view,arch_db:odoo_demo.res_partner_select_inherit
+msgid "Doctor"
+msgstr "Medico(a)"
+
+#. module: odoo_demo
+#: model:ir.model.fields.selection,name:odoo_demo.selection__cita_medica__state__done
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: odoo_demo
+#: model:ir.model.fields.selection,name:odoo_demo.selection__cita_medica__state__draft
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_res_partner__is_doctor
+#: model:ir.model.fields,field_description:odoo_demo.field_res_users__is_doctor
+msgid "Es Médico"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__datetime
+msgid "Fecha"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.report_cita_medico_document
+msgid "Foto"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__id
+msgid "ID"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__write_date
+msgid "Last Updated on"
+msgstr "Actualizado en"
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Medico(a)"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__partner_id
+msgid "Médico"
+msgstr ""
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__name
+msgid "Numero de cita"
+msgstr ""
+
+#. module: odoo_demo
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_form
+msgid "Set to draft"
+msgstr "Cambiar a borrador"
+
+#. module: odoo_demo
+#: model:ir.model.fields,field_description:odoo_demo.field_cita_medica__state
+#: model_terms:ir.ui.view,arch_db:odoo_demo.cita_medica_search
+msgid "Status"
+msgstr "Estado"

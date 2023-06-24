@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="cita_medica" model="ir.actions.report">
+            <field name="name">Cita Medica</field>
+            <field name="model">cita.medica</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">odoo_demo.report_cita_medico</field>
+            <field name="report_file">odoo_demo.report_cita_medico</field>
+            <field name="print_report_name">('Cita Medica')</field>
+            <field name="attachment">('cita_medica.pdf')</field>
+            <field name="binding_model_id" ref="model_cita_medica"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>
