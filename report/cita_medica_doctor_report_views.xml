@@ -1,0 +1,37 @@
+<odoo>
+
+    <record id="cita_medica_doctor_report_view_form" model="ir.ui.view">
+        <field name="name">cita.medica.doctor.report.view.form</field>
+        <field name="model">cita.medica.doctor.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="Parámetros">
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                    </group>
+                    <group string="Resultado">
+                        <field name="file_name" invisible="1"/>
+                        <field name="file" filename="file_name" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button string="Execute" attrs="{'invisible':[('file','!=',False)]}" name="generate_report" type="object" class="oe_highlight" data-hotkey="q"/>
+                        <button string="Cancel" attrs="{'invisible':[('file','!=',False)]}" class="btn btn-secondary" special="cancel" data-hotkey="z"/>
+                        <button string="Cerrar" attrs="{'invisible':[('file','=',False)]}" class="oe_highlight" special="cancel"/>
+                    </footer>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="cita_medica_doctor_report_action" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="res_model">cita.medica.doctor.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="cita_medica_doctor_report_action_menu" name="Doctor" parent="cita_medica_informe"
+              action="cita_medica_doctor_report_action"/>
+
+</odoo>

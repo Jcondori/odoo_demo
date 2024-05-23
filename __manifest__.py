@@ -22,19 +22,27 @@
     'depends': [
         'base',
         'account',
+        'account_reports',
     ],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/res.partner.category.csv',
+        'data/res_partner_category_data.xml',
         'views/cita_medica_views.xml',
         'views/templates.xml',
         'views/res_partner_views.xml',
         'views/report_cita.xml',
         'views/odoo_demo_report.xml',
+        'wizards/cita_medica_wizard_views.xml',
+        'report/cita_medica_doctor_report_views.xml',
+        'report/cita_medica_doctor_excel_report_views.xml',
+        'report/cita_medica_report_handler_views.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    # # only loaded in demonstration mode
+    # 'demo': [
+    #     'demo/demo.xml',
+    # ],
+    'license': 'LGPL-3',
 }

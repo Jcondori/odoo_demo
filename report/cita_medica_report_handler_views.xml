@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="cita_medica_report_handler" model="account.report">
+            <field name="name">Cita Medica</field>
+            <field name="custom_handler_model_id" ref="model_cita_medica_report_handler"/>
+            <field name="column_ids">
+                <record id="cita_medica_report_doctor" model="account.report.column">
+                    <field name="name">Doctor</field>
+                    <field name="expression_label">doctor</field>
+                </record>
+                <record id="cita_medica_report_" model="account.report.column">
+                    <field name="name">Description</field>
+                    <field name="expression_label">description</field>
+                </record>
+            </field>
+        </record>
+
+        <record id="action_cita_medica_report" model="ir.actions.client">
+            <field name="name">Cita Medica</field>
+            <field name="tag">account_report</field>
+            <field name="context" eval="{'report_id': ref('odoo_demo.cita_medica_report_handler')}"/>
+        </record>
+
+        <menuitem id="menu_cita_medica_report" name="Dinamico" parent="cita_medica_informe"
+                  action="action_cita_medica_report"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+
+        <record id="partner_category_003" model="res.partner.category">
+            <field name="name">Problematico</field>
+        </record>
+
+        <record id="partner_category_004" model="res.partner.category">
+            <field name="name">Cooperativo</field>
+        </record>
+
+    </data>
+</odoo>
